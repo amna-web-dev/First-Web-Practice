@@ -181,9 +181,9 @@ body {
 }
 
 .profile-card-glow img {
-    width: 290px;
-    height: 350px;
-    border-radius: 16px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
     object-fit: cover;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(20, 184, 166, 0.35);
@@ -549,6 +549,56 @@ footer {
 }
 
 /* Mobile Responsive Contact Form Fix */
+@media (max-width: 768px) {
+    .contact-form, 
+    .contact-container {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* 1. Hero Image Perfect Circle Fix */
+.hero-image img, 
+.profile-pic img {
+    width: 250px !important;
+    height: 250px !important;
+    min-width: 250px !important;
+    min-height: 250px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* 2. Page Load Fade-In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-card, .project-card, .about-content {
+    animation: fadeInUp 1s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* 3. Hover Movement Effect */
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-8px) !important;
+}
+
+/* 4. Mobile Responsive Contact Form Fix */
 @media (max-width: 768px) {
     .contact-form, 
     .contact-container {
